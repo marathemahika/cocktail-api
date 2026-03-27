@@ -1,20 +1,20 @@
 import express from "express";
 import axios from "axios";
+import path from "path";
 
 const app = express();
-const port = process.env.PORT || 3000;
 
+// Fix path for Vercel
+const __dirname = new URL('.', import.meta.url).pathname;
+
+app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
-app.use(express.static("public"));
 
 app.get("/", async (req, res) => {
-
   try {
-
     const url = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
 
     const response = await axios.get(url);
-
     const drink = response.data.drinks[0];
 
     res.render("index", {
@@ -24,12 +24,9 @@ app.get("/", async (req, res) => {
     });
 
   } catch (err) {
-
     console.log(err);
     res.send("Error fetching cocktail");
-
   }
-
 });
 
 export default app;
