@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cocktail Generator</title>
+</head>
+
+<body>
+
+<center>
+
+    <h1>🍹 Random Cocktail Generator</h1>
+
+    <hr width="50%">
+
+    <h2><%= name %></h2>
+
+    <img src="<%= image %>" width="250">
+
+    <br><br>
+
+    <table border="1" cellpadding="10" width="50%">
+        <tr>
+            <th>Instructions</th>
+        </tr>
+        <tr>
+            <td><%= instructions %></td>
+        </tr>
+    </table>
+
+    <br>
+
+    <form action="/" method="get">
+    <br>
+    <button type="submit"
+        style="
+            padding:12px 25px;
+            border-radius:20px;
+            border:1px solid black;
+            font-size:16px;
+            cursor:pointer;
+        ">
+        🍹 Get Another Cocktail
+    </button>
+</form>
+
+</center>
+
+</body>
+</html>
