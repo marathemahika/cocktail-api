@@ -1,34 +1,15 @@
 {
-  "name": "cocktail_api",
+  "name": "cocktail-api",
   "version": "1.0.0",
-  "description": "",
-  "type": "module",
+  "description": "Cocktail API project",
   "main": "solution.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node solution.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "axios": "^1.13.6",
-    "ejs": "^5.0.1",
-    "express": "^5.2.1"
+    "axios": "^1.6.0",
+    "express": "^4.18.2",
+    "ejs": "^3.1.9"
   }
-}
-
-{
-  "version": 2,
-  "builds": [
-    {
-      "src": "solution.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "solution.js"
-    }
-  ]
 }
